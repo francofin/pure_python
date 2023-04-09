@@ -1,0 +1,20 @@
+[{
+    "question":"What are dolphins?",
+    "answers":{
+        "a":"Mammal",
+        "b":"Carnivore",
+        "c":"HomeoSapien",
+        "d":"Alien"
+    },
+    "correct":"a"
+},
+    {
+"question":"What is Python?",
+    "answers":{
+        "a":"Snake",
+        "b":"Language",
+        "c":"Herbivore",
+        "d":"Nonsesne"
+    },
+    "correct":"a"
+    }]
