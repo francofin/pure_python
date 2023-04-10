@@ -5,8 +5,8 @@ import searcher
 import shutil
 import PySimpleGUI as sg
 sg.theme('DarkAmber')
-layout = [[sg.Text('Enter Path of files to zip'), sg.InputText(key="browsed_files"), sg.FilesBrowse(tooltip="Enter Files")],
-            [sg.Text('Enter Path to save zipped folder'), sg.InputText(), sg.FolderBrowse(tooltip="Enter Path", key="new_folder")],
+layout = [[sg.Text('Enter a file or multiple files to zip'), sg.InputText(key="browsed_files"), sg.FilesBrowse(tooltip="Enter Files")],
+            [sg.Text('Enter folder to save zipped files'), sg.InputText(), sg.FolderBrowse(tooltip="Enter Path", key="new_folder")],
             [sg.Button('Compress Folder')],
           [sg.Button('Exit')]]
 window = sg.Window("Local Zipper No hacks", layout=layout)

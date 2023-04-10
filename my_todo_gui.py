@@ -2,10 +2,17 @@ from utils import todo_functions
 import tkinter
 import searcher
 import time
+import os
 import PySimpleGUI as sg
+
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", "w") as f:
+        pass
+
+sg.theme('DarkAmber')
 clock = sg.Text(' ', key='clock')
 list_box = sg.Listbox(values=[x for x in todo_functions.get_todos()], enable_events=True, size=(25,5), key='todos')
-layout = [[clock], [sg.Text('Add Your Items for the Week')],
+layout = [[clock], [sg.Text('Add Your Items for the Week, Generates a todos.txt file for you.')],
             [sg.Text('Enter a new Item'), sg.InputText(tooltip="Enter Todo", key="todo")],
             [sg.Text('Do you want to edit an entry'),sg.InputText(tooltip='select an item to edit', key='edit'), sg.Combo([x+1 for x in range(0, len(todo_functions.get_todos()))], key='index_to_edit')],
             [sg.Text('Do you want to create a new file (optional)'),sg.InputText(tooltip="File Name", key="file_name"), sg.Button("Create File")],
